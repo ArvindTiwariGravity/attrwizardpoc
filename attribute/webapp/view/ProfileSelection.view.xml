@@ -1,0 +1,54 @@
+<mvc:View
+    controllerName="com.sap.attribute.controller.ProfileSelection"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:u="sap.ui.unified"
+    xmlns:layout="sap.ui.layout"
+    core:require="{formatter: 'com/sap/attribute/model/formatter'}">
+    <NavContainer id="navContainer">
+        <pages>
+            <Page
+                id="idPage"
+                title="{i18n>title}">
+                <content>
+                    <VBox>
+                        <items>
+                            <Label text="{i18n>selectProfile}" labelFor="idProfileComboBox" />
+                            <ComboBox
+                                id="idProfileComboBox"
+                                showSecondaryValues="true"
+                                selectionChange="onProfileSelection"
+                                items="{
+                                    path: 'viewModel>/profiles',
+                                    sorter: { path: 'code' }
+                                }"
+                            >
+                                <core:ListItem
+                                    key="{viewModel>code}"
+                                    text="{viewModel>description}"
+                                    additionalText="{viewModel>code}" />
+                            </ComboBox>
+                            <Button id="btnCreateWizard" type="Emphasized" text="{i18n>createWizard}" enabled="false" press="onCreateWizardPress" />
+                        </items>
+                    </VBox>
+                </content>
+            </Page>
+            <Page
+                id="idAttributeReviewPage"
+                title="Attribute Review Page">
+                <footer>
+                    <Bar>
+                        <contentRight>
+                            <Button text="Submit" type="Accept" press="handleWizardSubmit"/>
+                            <Button text="Cancel" type="Reject" press="handleWizardCancel"/>
+                        </contentRight>
+                    </Bar>
+                </footer>
+            </Page>
+        </pages>
+    </NavContainer>
+</mvc:View>

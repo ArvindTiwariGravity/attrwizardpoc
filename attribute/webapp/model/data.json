@@ -1,0 +1,26 @@
+{
+    "profiles": [
+      {
+        "createdAt": "2024-07-05T02:28:53.061Z",
+        "createdBy": "anonymous",
+        "modifiedAt": "2024-07-11T04:46:56.380Z",
+        "modifiedBy": "anonymous",
+        "profile": "TAXACCOUNT",
+        "description": "Tax Account",
+        "HasActiveEntity": false,
+        "HasDraftEntity": false,
+        "IsActiveEntity": true
+      },
+      {
+        "createdAt": "2024-07-05T02:28:53.061Z",
+        "createdBy": "anonymous",
+        "modifiedAt": "2024-07-05T02:28:53.061Z",
+        "modifiedBy": "anonymous",
+        "profile": "TAXPROPERTY",
+        "description": "Tax Property",
+        "HasActiveEntity": false,
+        "HasDraftEntity": true,
+        "IsActiveEntity": true
+      }
+    ]
+  }
